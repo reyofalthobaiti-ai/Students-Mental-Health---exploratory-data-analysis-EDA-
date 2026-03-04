@@ -1,5 +1,7 @@
 # Students-Mental-Health---exploratory-data-analysis-EDA-
 
+Dataset source: Kaggle – Student Mental Health Dataset
+
 🎓 Student Mental Health – Exploratory Data Analysis (EDA)
 
 📌 Project Overview
