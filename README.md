@@ -1,82 +1,84 @@
-# Students-Mental-Health---exploratory-data-analysis-EDA-
+# 🎓 Students Mental Health EDA
 
-# 🎓 Student Mental Health – Exploratory Data Analysis (EDA)
-
-**Dataset Source:** Kaggle – Student Mental Health Dataset  
+An exploratory data analysis (EDA) of mental health among university students, examining the relationship between academic performance, course of study, sports engagement, study satisfaction, stress relief activities, and mental health indicators such as anxiety and depression.
 
 ---
 
-## 📌 Project Overview
+## 📁 Dataset
 
-This project presents an Exploratory Data Analysis (EDA) of a student mental health dataset to identify patterns and relationships between demographic factors, academic variables, and mental health conditions such as depression and anxiety.
+Download the dataset from Kaggle: [Mental Health Survey](https://www.kaggle.com/datasets/abdullahashfaqvirk/student-mental-health-survey)
 
-The objective of this analysis is to better understand how different factors may influence students' emotional well-being and to extract meaningful insights through data-driven exploration.
+Place `MentalHealthSurvey.csv` in the same folder as the notebook before running.
 
----
+The dataset contains survey responses from university students with the following features:
 
-## 📂 Dataset Description
-
-The dataset includes information about:
-
-- Age  
-- Gender  
-- Course of study  
-- Year of study  
-- CGPA  
-- Depression (Yes/No)  
-- Anxiety (Yes/No)  
-- Panic attacks (Yes/No)  
-- Treatment status  
-
-The data contains both numerical and categorical variables, making it suitable for structured exploratory analysis.
+| Column | Description |
+|--------|-------------|
+| `gender` | Student's gender |
+| `age` | Student's age |
+| `degree_major` | Field of study |
+| `cgpa` | Cumulative GPA (stored as ranges e.g. '3.0-3.5') |
+| `anxiety` | Whether the student experiences anxiety (1 = Yes, 0 = No) |
+| `depression` | Whether the student experiences depression (1 = Yes, 0 = No) |
+| `sports_engagement` | Level of sports participation |
+| `study_satisfaction` | Student's satisfaction with their studies |
+| `stress_relief_activities` | Activities used to cope with stress |
+| `financial_concerns` | Level of financial stress |
+| `future_insecurity` | Level of concern about the future |
 
 ---
 
-## 🧹 Data Cleaning & Preparation
+## 🔍 Key Findings
 
-The following preprocessing steps were performed:
-
-- Inspected dataset structure using `.info()` and `.shape()`  
-- Checked for missing values  
-- Reviewed data types for consistency  
-- Generated descriptive statistics for numerical columns  
-- Analyzed categorical variable distributions using `value_counts()`  
+- 📈 **Higher GPA students tend to report higher anxiety levels**, suggesting high achievers may experience more academic pressure
+- 🏃 **Students with moderate sports engagement have the highest average CGPA (~3.4)**, while excessive or no sports engagement is associated with lower academic performance
+- 📚 **Higher study satisfaction is associated with higher CGPA**, suggesting engagement and enjoyment in academics positively influences performance
+- 🙏 **Religious activities are the most common stress relief method** among students
+- 💰 **Higher financial concerns and future insecurity are associated with higher depression and anxiety levels**
 
 ---
 
-## 🔍 Exploratory Data Analysis
+## 📊 Analysis Covered
 
-The analysis focused on:
-
-- Distribution of depression and anxiety among students  
-- Gender-based mental health comparisons  
-- Course-level differences in reported mental health conditions  
-- Relationship between CGPA and depression status  
-- Grouped analysis using `groupby()` to explore variable interactions  
-
-Visualizations were created to support pattern recognition and interpretation.
+- Univariate analysis — distribution of individual variables
+- Bivariate analysis — relationships between two variables
+- Multivariate analysis — pairplot across CGPA, anxiety, depression, financial concerns
+- Data cleaning — converting CGPA ranges to numeric values
+- Visualizations using pandas, matplotlib, and seaborn
 
 ---
 
-## 🔎 Key Insights
+## 🛠️ Libraries Used
 
-- A significant portion of students reported experiencing depression and anxiety.  
-- Female students showed higher reported levels of mental health challenges.  
-- Certain academic disciplines demonstrated higher reported mental health concerns.  
-- Students experiencing depression showed variation in CGPA compared to non-depressed students.  
-
----
-
-## 📊 Tools & Technologies Used
-
-- Python  
-- Pandas  
-- NumPy  
-- Matplotlib / Seaborn  
-- Jupyter Notebook  
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
 
 ---
 
-## 🎯 Conclusion
+## 🚀 How to Run
 
-The analysis highlights the presence of mental health challenges among students and demonstrates how demographic and academic variables may influence emotional well-being. These insights reinforce the importance of mental health awareness initiatives and structured support systems in academic institutions.
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/students-mental-health-EDA.git
+```
+
+2. Download the dataset from Kaggle and place it in the repo folder
+
+3. Install dependencies
+```bash
+pip install pandas matplotlib seaborn jupyter
+```
+
+4. Open the notebook
+```bash
+jupyter notebook students-mental-health_EDA2.ipynb
+```
+
+---
+
+## ⚠️ Disclaimer
+
+This analysis is for educational purposes only. Correlation does not imply causation — findings should not be interpreted as definitive conclusions about mental health.
